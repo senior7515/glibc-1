@@ -1,5 +1,12 @@
 2016-01-13  Adhemerval Zanella  <adhemerval.zanella@linaro.org>
 
+	* nptl/Makefile [$(run-built-tests) = yes] (tests-special): Remove
+	tst-cancel-wrappers.sh.
+	* nptl/tst-cancel-wrappers.sh: Remove file.
+	* nptl/tst-cancel4.c (tf_write): Handle cancelled syscall with
+	side-effects.
+	(tf_send): Likewise.
+
 	* sysdeps/unix/make-syscalls.sh: Remove cancellable tagging for
 	syscall definitions.
 	* sysdeps/unix/syscall-template.S (SYSCALL_CANCELLABLE): Remove
