@@ -39,6 +39,7 @@
 #endif
 
 #if !defined __arch64__
+# undef __ASSUME_RECVFROM_SYSCALL
 # undef __ASSUME_ACCEPT_SYSCALL
 # undef __ASSUME_CONNECT_SYSCALL
 #endif
