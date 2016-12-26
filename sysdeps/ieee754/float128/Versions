@@ -40,7 +40,9 @@ libm {
     floorf128;
     fmaf128;
     fmaxf128;
+    fmaxmagf128;
     fminf128;
+    fminmagf128;
     fmodf128;
     frexpf128;
     getpayloadf128;
@@ -68,6 +70,7 @@ libm {
     remainderf128;
     remquof128;
     rintf128;
+    roundevenf128;
     roundf128;
     scalblnf128;
     scalbnf128;
