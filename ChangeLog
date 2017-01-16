@@ -1,5 +1,10 @@
 2016-01-13  Adhemerval Zanella  <adhemerval.zanella@linaro.org>
 
+	* sysdeps/mips/nptl/tls.h (READ_THREAD_POINTER): Check __mips_isa_rev
+	existance for macro definition.
+	* sysdeps/unix/sysv/linux/mips/sysdep-cancel.h (__pthread_get_pc):
+	New function.
+
 	* sysdeps/unix/sysv/linux/sh/sysdep-cancel.h (__pthread_get_pc):
 	New function.
 
