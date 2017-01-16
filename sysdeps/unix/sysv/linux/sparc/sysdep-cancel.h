@@ -36,3 +36,13 @@
 #define RTLD_SINGLE_THREAD_P \
   __builtin_expect (THREAD_GETMEM (THREAD_SELF, \
 				   header.multiple_threads) == 0, 1)
+
+static inline
+uintptr_t __pthread_get_pc (const struct ucontext *uc)
+{
+#if __WORDSIZE == 64
+  return uc->uc_mcontext.mc_gregs[MC_PC];
+#else
+  return uc->uc_mcontext.gregs[REG_PC];
+#endif
+}
